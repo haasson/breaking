@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="https://vuejs.org/images/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+   <v-app id="inspire">
+      <Navbar />
+      <v-main class="pt-15">
+         <v-container fluid fill-height>
+            <v-layout justify-center>
+               <router-view></router-view>
+            </v-layout>
+         </v-container>
+      </v-main>
+      <v-footer app fixed>
+         <span>&copy; 2021</span>
+      </v-footer>
+   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from "@/components/app/Navbar";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+   name: "App",
+   components: {
+      Navbar,
+   }
 
+};
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
